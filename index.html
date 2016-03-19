@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ROIT</title>
+    <link rel="stylesheet" href="dest/tags/css/riot_tag.css"/>
+</head>
+
+<body>
+    <to-do name="linfeng" height="177"></to-do>
+    <submit></submit>
+    <notice id="me"><b>Josh</b></notice>
+    <script src="riot.js"></script>
+    <script src="dest/tags/js/riot_tag.js"></script>
+    <script>
+
+    riot.mixin('util',{
+        getName: function () {
+            alert(this.name || 'no name');
+        }
+    });
+
+    riot.compile(function() {
+
+        var todo = riot.mount('to-do', {
+            title: '待办事项',
+            cusColor: 'blue',
+            age: 18,
+            items: [{
+                title: '事项1',
+                date: '2012-12-30'
+
+            }, {
+                title: '事项2',
+                date: '2012-09-20'
+
+            }, {
+                title: '事项3',
+                date: '2013-11-23'
+
+            },
+            {
+                title: '事项7',
+                date: '2007-10-16'
+
+            }]
+        });
+
+        var submit = riot.mount('submit');
+        // console.log(submit[0]);
+        /*submit[0].on('submit', function(e) {
+            todo[0].opts.items.push(e);
+            todo[0].update();
+        });*/
+
+
+
+        var notice = riot.mount('notice');
+
+
+    });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/** ----- created by gulp-riot-css -----*/
+
+
+[riot-tag=submit] fieldset,submit fieldset
+{
+  border: 2px dashed threedface;
+}
+
